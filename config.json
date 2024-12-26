@@ -1,0 +1,40 @@
+{
+    "credentials": {
+        "client_secrets_path": "./credentials.json",
+        "token_path": "./token.json"
+    },
+    "logging": {
+        "log_directory": "./logs",
+        "log_level": "DEBUG",
+        "log_format": "%(asctime)s - %(levelname)s - %(message)s",
+        "max_log_size_mb": 10,
+        "backup_count": 5
+    },
+    "source": {
+        "folder_id": "YOUR_SOURCE_FOLDER_ID",
+        "test_folder_name": "TestPath"
+    },
+    "destination": {
+        "folder_id": "YOUR_DESTINATION_FOLDER_ID",
+        "preserve_dates": true,
+        "preserve_sharing": false
+    },
+    "migration": {
+        "max_retries": 3,
+        "retry_delay_seconds": 5,
+        "validate_checksums": true,
+        "timeout_seconds": 300,
+        "batch_size": 100,
+        "auto_fix_missing": true,
+        "final_validation": true
+    },
+    "test_settings": {
+        "print_folder_structure": true,
+        "max_test_files": 10,
+        "size_threshold_gb": 160
+    },
+    "performance": {
+        "user_rate_limit": 12000,
+        "user_time_window": 60
+    }
+}
